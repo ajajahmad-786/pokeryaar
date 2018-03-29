@@ -33,9 +33,20 @@
 <body>
 
   <!-- Ionic's root component and where the app will load -->
-  <ion-app>
-    <a href="https://pokeryaar-app-betaslot.azurewebsites.net/applogin/">Click Here</a>
-  </ion-app>
+  <ion-header-bar class="bar-stable">
+        <h1 class="title">InAppBrowser</h1>
+    </ion-header-bar>
+    <ion-content ng-controller="ExampleController" padding="true">
+        <button class="button button-full button-assertive" ng-click="openInExternalBrowser()">
+            Open In External Browser
+        </button>
+        <button class="button button-full button-assertive" ng-click="openInAppBrowser()">
+            Open In App Browser
+        </button>
+         <button class="button button-full button-assertive" ng-click="openCordovaWebView()">
+            Open In Cordova Webview
+        </button>
+    </ion-content>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
